@@ -1,0 +1,184 @@
+[
+  {
+    "networkNumber": 1,
+    "title": "急停和故障优先",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "SCOIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "HMI_急停"},
+      {"uid": 11, "type": "Symbol", "symbol": "PLC_故障"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 2,
+    "title": "正转启动命令",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 3, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 4, "name": "SCOIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "HMI_正转启动"},
+      {"uid": 11, "type": "Symbol", "symbol": "HMI_停止"},
+      {"uid": 12, "type": "Symbol", "symbol": "PLC_反转保持"},
+      {"uid": 13, "type": "Symbol", "symbol": "PLC_正转保持"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in"]},
+      {"endpoints": ["2.out", "3.in"]},
+      {"endpoints": ["3.out", "4.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]},
+      {"endpoints": ["#12", "3.operand"]},
+      {"endpoints": ["#13", "4.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 3,
+    "title": "反转启动命令",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 3, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 4, "name": "SCOIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "HMI_反转启动"},
+      {"uid": 11, "type": "Symbol", "symbol": "HMI_停止"},
+      {"uid": 12, "type": "Symbol", "symbol": "PLC_正转保持"},
+      {"uid": 13, "type": "Symbol", "symbol": "PLC_反转保持"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in"]},
+      {"endpoints": ["2.out", "3.in"]},
+      {"endpoints": ["3.out", "4.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]},
+      {"endpoints": ["#12", "3.operand"]},
+      {"endpoints": ["#13", "4.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 4,
+    "title": "正转输出",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 3, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 4, "name": "COIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "PLC_正转保持"},
+      {"uid": 11, "type": "Symbol", "symbol": "PLC_故障"},
+      {"uid": 12, "type": "Symbol", "symbol": "PLC_反转输出"},
+      {"uid": 13, "type": "Symbol", "symbol": "PLC_正转输出"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in"]},
+      {"endpoints": ["2.out", "3.in"]},
+      {"endpoints": ["3.out", "4.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]},
+      {"endpoints": ["#12", "3.operand"]},
+      {"endpoints": ["#13", "4.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 5,
+    "title": "反转输出",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 3, "name": "CONTACT", "negated": ["operand"]},
+      {"uid": 4, "name": "COIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "PLC_反转保持"},
+      {"uid": 11, "type": "Symbol", "symbol": "PLC_故障"},
+      {"uid": 12, "type": "Symbol", "symbol": "PLC_正转输出"},
+      {"uid": 13, "type": "Symbol", "symbol": "PLC_反转输出"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in"]},
+      {"endpoints": ["2.out", "3.in"]},
+      {"endpoints": ["3.out", "4.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]},
+      {"endpoints": ["#12", "3.operand"]},
+      {"endpoints": ["#13", "4.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 6,
+    "title": "停止复位保持",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "RCOIL", "negated": []},
+      {"uid": 3, "name": "RCOIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "HMI_停止"},
+      {"uid": 11, "type": "Symbol", "symbol": "PLC_正转保持"},
+      {"uid": 12, "type": "Symbol", "symbol": "PLC_反转保持"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in", "3.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]},
+      {"endpoints": ["#12", "3.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 7,
+    "title": "故障复位",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "RCOIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "HMI_故障复位"},
+      {"uid": 11, "type": "Symbol", "symbol": "PLC_故障"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]}
+    ]
+  },
+  {
+    "networkNumber": 8,
+    "title": "急停复位运行保持",
+    "parts": [
+      {"uid": 1, "name": "CONTACT", "negated": []},
+      {"uid": 2, "name": "RCOIL", "negated": []},
+      {"uid": 3, "name": "RCOIL", "negated": []}
+    ],
+    "accesses": [
+      {"uid": 10, "type": "Symbol", "symbol": "HMI_急停"},
+      {"uid": 11, "type": "Symbol", "symbol": "PLC_正转保持"},
+      {"uid": 12, "type": "Symbol", "symbol": "PLC_反转保持"}
+    ],
+    "wires": [
+      {"endpoints": ["Powerrail", "1.in"]},
+      {"endpoints": ["1.out", "2.in", "3.in"]},
+      {"endpoints": ["#10", "1.operand"]},
+      {"endpoints": ["#11", "2.operand"]},
+      {"endpoints": ["#12", "3.operand"]}
+    ]
+  }
+]

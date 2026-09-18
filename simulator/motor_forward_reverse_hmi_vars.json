@@ -1,0 +1,16 @@
+{
+  "HMI_正转启动": {"type": "Bool", "init": false},
+  "HMI_反转启动": {"type": "Bool", "init": false},
+  "HMI_停止": {"type": "Bool", "init": false},
+  "HMI_急停": {"type": "Bool", "init": false},
+  "HMI_故障复位": {"type": "Bool", "init": false},
+  "HMI_自动运行": {"type": "Bool", "init": false},
+  "PLC_故障": {"type": "Bool", "init": false},
+  "PLC_正转保持": {"type": "Bool", "init": false},
+  "PLC_反转保持": {"type": "Bool", "init": false},
+  "PLC_正转输出": {"type": "Bool", "init": false},
+  "PLC_反转输出": {"type": "Bool", "init": false},
+  "PLC_运行反馈": {"type": "Bool", "init": false},
+  "PLC_自动步": {"type": "Bool", "init": false},
+  "PLC_仿真时间到": {"type": "Bool", "init": false}
+}
