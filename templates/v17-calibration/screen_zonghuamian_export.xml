@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2026-08-11T13:54:29.0707996Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Professional</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <Hmi.Screen.Screen ID="0">
+    <AttributeList>
+      <ActiveLayer>0</ActiveLayer>
+      <BackColor>182, 182, 182</BackColor>
+      <GridColor>0, 0, 0</GridColor>
+      <Height>800</Height>
+      <Name>总画面</Name>
+      <Number>1</Number>
+      <Visible>true</Visible>
+      <Width>1280</Width>
+    </AttributeList>
+    <LinkList>
+      <Template TargetID="@OpenLink">
+        <Name>模板_2</Name>
+      </Template>
+    </LinkList>
+    <ObjectList>
+      <MultilingualText ID="2" CompositionName="HelpText">
+        <ObjectList>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <Hmi.Screen.ScreenLayer ID="4" CompositionName="Layers">
+        <AttributeList>
+          <Index>0</Index>
+          <Name />
+          <VisibleES>true</VisibleES>
+        </AttributeList>
+        <ObjectList>
+          <Hmi.Screen.GraphicView ID="5" CompositionName="ScreenItems">
+            <AttributeList>
+              <AutoSizing>StretchPicture</AutoSizing>
+              <BackColor>173, 174, 181</BackColor>
+              <BackFillStyle>Solid</BackFillStyle>
+              <BorderColor>0, 0, 0</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <EdgeStyle>Solid</EdgeStyle>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <Height>700</Height>
+              <Left>0</Left>
+              <ObjectName>背景图片</ObjectName>
+              <TabIndex>-1</TabIndex>
+              <Top>100</Top>
+              <TransparentColor>255, 0, 255</TransparentColor>
+              <UseTransparentColor>false</UseTransparentColor>
+              <Width>1278</Width>
+            </AttributeList>
+            <LinkList>
+              <Picture TargetID="@OpenLink">
+                <Name>QQ截图20160302143524</Name>
+              </Picture>
+            </LinkList>
+          </Hmi.Screen.GraphicView>
+          <Hmi.Screen.Button ID="7" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>99, 101, 113</BackColor>
+              <BackFillStyle>Transparent</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>105, 105, 105</BorderBackColor>
+              <BorderColor>71, 73, 87</BorderColor>
+              <BorderWidth>0</BorderWidth>
+              <CornerRadius>3</CornerRadius>
+              <CornerStyle>Pointed</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>131, 132, 142</FirstGradientColor>
+              <FirstGradientOffset>15</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>148, 182, 231</FocusColor>
+              <FocusWidth>2</FocusWidth>
+              <ForeColor>255, 255, 255</ForeColor>
+              <Height>29</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>761</Left>
+              <MiddleGradientColor>99, 101, 113</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>按钮_3</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>88, 90, 103</SecondGradientColor>
+              <SecondGradientOffset>15</SecondGradientOffset>
+              <TabIndex>1</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>584</Top>
+              <UseDesignColorSchema>false</UseDesignColorSchema>
+              <UseFirstGradient>true</UseFirstGradient>
+              <UseSecondGradient>true</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>48</Width>
+            </AttributeList>
+            <ObjectList>
+              <Hmi.Globalization.MultiLingualFont ID="8" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="9" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <FontFamily>宋体</FontFamily>
+                      <FontSize>17</FontSize>
+                      <FontStyle>Bold</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="A" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="C" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p /></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="E" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="F" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>Text</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="10" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>99, 101, 113</BackColor>
+              <BackFillStyle>GradientVertical</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>105, 105, 105</BorderBackColor>
+              <BorderColor>71, 73, 87</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CornerRadius>3</CornerRadius>
+              <CornerStyle>Pointed</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>131, 132, 142</FirstGradientColor>
+              <FirstGradientOffset>15</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>148, 182, 231</FocusColor>
+              <FocusWidth>2</FocusWidth>
+              <ForeColor>255, 255, 255</ForeColor>
+              <Height>92</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>216</Left>
+              <MiddleGradientColor>99, 101, 113</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>按钮_2</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>88, 90, 103</SecondGradientColor>
+              <SecondGradientOffset>15</SecondGradientOffset>
+              <TabIndex>2</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>380</Top>
+              <UseDesignColorSchema>false</UseDesignColorSchema>
+              <UseFirstGradient>true</UseFirstGradient>
+              <UseSecondGradient>true</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>215</Width>
+            </AttributeList>
+            <ObjectList>
+              <Hmi.Event.Event ID="11" CompositionName="Events">
+                <AttributeList>
+                  <Name>Release</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="12" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="13" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>ActivateScreen</Name>
+                          <Type>SystemFunction</Type>
+                        </AttributeList>
+                        <ObjectList>
+                          <Hmi.Event.FunctionListEntryParameter ID="14" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Screen name</Name>
+                            </AttributeList>
+                            <LinkList>
+                              <Value TargetID="@OpenLink">
+                                <Name>成品库</Name>
+                              </Value>
+                            </LinkList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                          <Hmi.Event.FunctionListEntryParameter ID="16" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Object number</Name>
+                              <Value Type="System.Int32">0</Value>
+                            </AttributeList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                        </ObjectList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="17" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="18" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <FontFamily>宋体</FontFamily>
+                      <FontSize>40</FontSize>
+                      <FontStyle>Bold</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="19" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="1A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="1B" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="1C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>成品库</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="1D" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="1E" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>Text</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="1F" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>99, 101, 113</BackColor>
+              <BackFillStyle>GradientVertical</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>105, 105, 105</BorderBackColor>
+              <BorderColor>71, 73, 87</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CornerRadius>3</CornerRadius>
+              <CornerStyle>Pointed</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>131, 132, 142</FirstGradientColor>
+              <FirstGradientOffset>15</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>148, 182, 231</FocusColor>
+              <FocusWidth>2</FocusWidth>
+              <ForeColor>255, 255, 255</ForeColor>
+              <Height>92</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>832</Left>
+              <MiddleGradientColor>99, 101, 113</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>按钮_6</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>88, 90, 103</SecondGradientColor>
+              <SecondGradientOffset>15</SecondGradientOffset>
+              <TabIndex>3</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>379</Top>
+              <UseDesignColorSchema>false</UseDesignColorSchema>
+              <UseFirstGradient>true</UseFirstGradient>
+              <UseSecondGradient>true</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>215</Width>
+            </AttributeList>
+            <ObjectList>
+              <Hmi.Event.Event ID="20" CompositionName="Events">
+                <AttributeList>
+                  <Name>Release</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="21" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="22" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>ActivateScreen</Name>
+                          <Type>SystemFunction</Type>
+                        </AttributeList>
+                        <ObjectList>
+                          <Hmi.Event.FunctionListEntryParameter ID="23" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Screen name</Name>
+                            </AttributeList>
+                            <LinkList>
+                              <Value TargetID="@OpenLink">
+                                <Name>故障查询画面</Name>
+                              </Value>
+                            </LinkList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                          <Hmi.Event.FunctionListEntryParameter ID="25" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Object number</Name>
+                              <Value Type="System.Int32">0</Value>
+                            </AttributeList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                        </ObjectList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="26" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="27" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <FontFamily>宋体</FontFamily>
+                      <FontSize>40</FontSize>
+                      <FontStyle>Bold</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="28" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="29" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="2A" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="2B" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>报警查询</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="2C" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="2D" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>Text</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+          <Hmi.Screen.Button ID="2E" CompositionName="ScreenItems">
+            <AttributeList>
+              <BackColor>99, 101, 113</BackColor>
+              <BackFillStyle>GradientVertical</BackFillStyle>
+              <BitNumber>0</BitNumber>
+              <BorderBackColor>105, 105, 105</BorderBackColor>
+              <BorderColor>71, 73, 87</BorderColor>
+              <BorderWidth>2</BorderWidth>
+              <CornerRadius>3</CornerRadius>
+              <CornerStyle>Pointed</CornerStyle>
+              <EdgeStyle>Solid</EdgeStyle>
+              <Enabled>true</Enabled>
+              <FirstGradientColor>131, 132, 142</FirstGradientColor>
+              <FirstGradientOffset>15</FirstGradientOffset>
+              <FitToLargest>false</FitToLargest>
+              <Flashing>None</Flashing>
+              <FocusColor>148, 182, 231</FocusColor>
+              <FocusWidth>2</FocusWidth>
+              <ForeColor>255, 255, 255</ForeColor>
+              <Height>92</Height>
+              <HorizontalAlignment>Center</HorizontalAlignment>
+              <HorizontalPictureAlignment>Center</HorizontalPictureAlignment>
+              <HotKey>0</HotKey>
+              <Left>526</Left>
+              <MiddleGradientColor>99, 101, 113</MiddleGradientColor>
+              <Mode>Text</Mode>
+              <ObjectName>按钮_7</ObjectName>
+              <PictureAreaBottomMargin>0</PictureAreaBottomMargin>
+              <PictureAreaLeftMargin>0</PictureAreaLeftMargin>
+              <PictureAreaRightMargin>0</PictureAreaRightMargin>
+              <PictureAreaTopMargin>0</PictureAreaTopMargin>
+              <PictureAutoSizing>StretchPicture</PictureAutoSizing>
+              <SecondGradientColor>88, 90, 103</SecondGradientColor>
+              <SecondGradientOffset>15</SecondGradientOffset>
+              <TabIndex>4</TabIndex>
+              <TextAreaBottomMargin>0</TextAreaBottomMargin>
+              <TextAreaLeftMargin>0</TextAreaLeftMargin>
+              <TextAreaRightMargin>0</TextAreaRightMargin>
+              <TextAreaTopMargin>0</TextAreaTopMargin>
+              <TextOrientation>Horizontal</TextOrientation>
+              <Top>377</Top>
+              <UseDesignColorSchema>false</UseDesignColorSchema>
+              <UseFirstGradient>true</UseFirstGradient>
+              <UseSecondGradient>true</UseSecondGradient>
+              <UseTwoHandOperation>false</UseTwoHandOperation>
+              <VerticalAlignment>Middle</VerticalAlignment>
+              <VerticalPictureAlignment>Middle</VerticalPictureAlignment>
+              <Width>215</Width>
+            </AttributeList>
+            <ObjectList>
+              <Hmi.Event.Event ID="2F" CompositionName="Events">
+                <AttributeList>
+                  <Name>Release</Name>
+                </AttributeList>
+                <ObjectList>
+                  <Hmi.Event.FunctionListEventHandler ID="30" CompositionName="EventHandler">
+                    <ObjectList>
+                      <Hmi.Event.FunctionListEntry ID="31" CompositionName="FunctionListEntries">
+                        <AttributeList>
+                          <Name>ActivateScreen</Name>
+                          <Type>SystemFunction</Type>
+                        </AttributeList>
+                        <ObjectList>
+                          <Hmi.Event.FunctionListEntryParameter ID="32" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Screen name</Name>
+                            </AttributeList>
+                            <LinkList>
+                              <Value TargetID="@OpenLink">
+                                <Name>权限管理画面</Name>
+                              </Value>
+                            </LinkList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                          <Hmi.Event.FunctionListEntryParameter ID="34" CompositionName="Parameters">
+                            <AttributeList>
+                              <Name>Object number</Name>
+                              <Value Type="System.Int32">0</Value>
+                            </AttributeList>
+                          </Hmi.Event.FunctionListEntryParameter>
+                        </ObjectList>
+                      </Hmi.Event.FunctionListEntry>
+                    </ObjectList>
+                  </Hmi.Event.FunctionListEventHandler>
+                </ObjectList>
+              </Hmi.Event.Event>
+              <Hmi.Globalization.MultiLingualFont ID="35" CompositionName="Font">
+                <ObjectList>
+                  <Hmi.Globalization.FontItem ID="36" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <FontFamily>宋体</FontFamily>
+                      <FontSize>40</FontSize>
+                      <FontStyle>Bold</FontStyle>
+                    </AttributeList>
+                  </Hmi.Globalization.FontItem>
+                </ObjectList>
+              </Hmi.Globalization.MultiLingualFont>
+              <MultilingualText ID="37" CompositionName="HelpText">
+                <ObjectList>
+                  <MultilingualTextItem ID="38" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text />
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="39" CompositionName="TextOff">
+                <ObjectList>
+                  <MultilingualTextItem ID="3A" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>权限管理</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+              <MultilingualText ID="3B" CompositionName="TextOn">
+                <ObjectList>
+                  <MultilingualTextItem ID="3C" CompositionName="Items">
+                    <AttributeList>
+                      <Culture>zh-CN</Culture>
+                      <Text><body><p>Text</p></body></Text>
+                    </AttributeList>
+                  </MultilingualTextItem>
+                </ObjectList>
+              </MultilingualText>
+            </ObjectList>
+          </Hmi.Screen.Button>
+        </ObjectList>
+      </Hmi.Screen.ScreenLayer>
+    </ObjectList>
+  </Hmi.Screen.Screen>
+</Document>

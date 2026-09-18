@@ -1,0 +1,58 @@
+﻿{
+  "task": "两层升降平台",
+  "environment": {
+    "tia": "V19 Update 4",
+    "plc": "S7-1200",
+    "hmi": "WinCC Advanced",
+    "canvas": {
+      "width": 800,
+      "height": 420
+    }
+  },
+  "network": {
+    "subnet": "PN/IE_1",
+    "plcDevice": "PLC_1",
+    "hmiDevice": "HMI_1",
+    "connectionMode": "integratedBySharedSubnet",
+    "connectionName": "generatedByTia"
+  },
+  "ladDesign": {
+    "modes": [
+      "手动",
+      "自动",
+      "检修"
+    ],
+    "oppositeOutputs": [
+      [
+        "上升命令",
+        "下降命令"
+      ]
+    ],
+    "safetyInputs": [
+      "急停正常",
+      "上限位正常",
+      "下限位正常"
+    ],
+    "acceptanceTests": [
+      "上升时下降命令不能成立",
+      "急停出现时所有运动输出立即断开",
+      "故障未消除时复位不得重新启动"
+    ]
+  },
+  "hmiDesign": {
+    "safeMargins": {
+      "left": 10,
+      "top": 5,
+      "right": 10,
+      "bottom": 10
+    },
+    "title": {
+      "text": "两层升降平台控制系统",
+      "fontSize": 20,
+      "height": 28
+    },
+    "buttonFontSize": 14,
+    "statusFontSize": 11,
+    "indicatorDiameter": 26
+  }
+}

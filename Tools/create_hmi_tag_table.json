@@ -1,0 +1,17 @@
+﻿{
+  "name": "create_hmi_tag_table",
+  "description": "创建空的 HMI 变量表。实现：生成最小变量表 XML（只含表名，ObjectList 为空）后通过 TagTables.Import 创建。注意：若同名表已存在则返回错误（避免清空现有 Tag）。创建后可用 BatchCreateHmiTags 向其中添加变量，或用 ImportHmiTagTable 导入含变量的完整 XML。",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "tableName": {
+        "type": "string",
+        "description": "变量表名（必填，不能与默认变量表重名）"
+      }
+    },
+    "required": [
+      "tableName"
+    ],
+    "additionalProperties": true
+  }
+}

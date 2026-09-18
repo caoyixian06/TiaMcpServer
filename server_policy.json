@@ -1,0 +1,12 @@
+{
+  "defaultExecutionMode": "Auto",
+  "notes": [
+    "工程工作流为可选功能，当前已关闭：无需 prepare_autonomous_project、阶段推进或计划批准即可调用普通工程工具。",
+    "工作流关闭不等于取消安全边界：参数 Schema、风险分类、控制端锁、在线授权、TIA 状态检查以及删除/重置确认仍然生效。"
+  ],
+  "engineeringWorkflow": {
+    "enabled": false,
+    "enforcementMode": "off",
+    "requireApprovedPlanForProjectCreation": false
+  }
+}

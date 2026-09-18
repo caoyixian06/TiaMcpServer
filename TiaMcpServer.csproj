@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>TiaMcpServer</AssemblyName>
+    <AssemblyTitle>博途智能工程助手</AssemblyTitle>
+    <Version>4.4.5</Version>
+    <AssemblyVersion>4.4.5.0</AssemblyVersion>
+    <FileVersion>4.4.5.0</FileVersion>
+    <InformationalVersion>4.4.5-v17fix1</InformationalVersion>
+    <RootNamespace>TiaMcpServer</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+
+  <!--
+    V4.4.4 继续支持按工程和本机安装动态选择 TIA 版本。
+    推荐用 scripts\构建V4.4.4.ps1，它会扫描注册表和所有盘符并传入 TiaPortalDir/TiaVersion。
+    也可手动：dotnet build -p:TiaPortalDir="D:\...\Portal V17" -p:TiaVersion=V17 或 -p:TiaVersion=17（自动补 V 前缀）。
+  -->
+  <PropertyGroup Condition=" '$(TiaPortalDir)' == '' And '$(TIA_PORTAL_DIR)' != '' ">
+    <TiaPortalDir>$(TIA_PORTAL_DIR)</TiaPortalDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TiaVersion)' == '' And '$(TIA_PORTAL_VERSION)' != '' ">
+    <TiaVersion>$(TIA_PORTAL_VERSION)</TiaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TiaVersion)' == '' ">
+    <TiaVersion>V17</TiaVersion>
+  </PropertyGroup>
+  <!--
+    V 前缀归一：-p:TiaVersion=17 自动补 V 前缀。
+    命令行传入的 TiaVersion 是全局属性、无法在项目内改写，故派生 TiaVersionNormalized 供后续使用。
+  -->
+  <PropertyGroup Condition=" '$(TiaVersion)' != '' And !$(TiaVersion.ToUpperInvariant().StartsWith('V')) ">
+    <TiaVersionNormalized>V$(TiaVersion)</TiaVersionNormalized>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TiaVersionNormalized)' == '' And '$(TiaVersion)' != '' ">
+    <TiaVersionNormalized>$(TiaVersion)</TiaVersionNormalized>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TiaVersionNormalized)' == '' ">
+    <TiaVersionNormalized>V17</TiaVersionNormalized>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TiaPortalDir)' == '' And Exists('$(ProgramFiles)\Siemens\Automation\Portal $(TiaVersionNormalized)\PublicAPI\$(TiaVersionNormalized)\Siemens.Engineering.dll') ">
+    <TiaPortalDir>$(ProgramFiles)\Siemens\Automation\Portal $(TiaVersionNormalized)</TiaPortalDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SiemensPublicApiDir>$(TiaPortalDir)\PublicAPI\$(TiaVersionNormalized)</SiemensPublicApiDir>
+    <SiemensBinDir>$(TiaPortalDir)\Bin</SiemensBinDir>
+    <SiemensContractPath Condition="Exists('$(SiemensBinDir)\PublicAPI\Siemens.Engineering.Contract.dll')">$(SiemensBinDir)\PublicAPI\Siemens.Engineering.Contract.dll</SiemensContractPath>
+    <SiemensContractPath Condition="'$(SiemensContractPath)' == '' And Exists('$(SiemensPublicApiDir)\Siemens.Engineering.Contract.dll')">$(SiemensPublicApiDir)\Siemens.Engineering.Contract.dll</SiemensContractPath>
+  </PropertyGroup>
+
+  <Target Name="WarnIfTiaPortalDirMissing" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition=" '$(TiaPortalDir)' == '' " Text="未找到 TIA Portal 安装目录（TiaPortalDir / TIA_PORTAL_DIR 未设置或路径无效）。请运行 scripts\构建V4.4.4.ps1 自动发现，或设置 TIA_PORTAL_DIR 后重新构建。" />
+    <Error Condition=" '$(TiaPortalDir)' != '' And !Exists('$(SiemensPublicApiDir)\Siemens.Engineering.dll') " Text="指定的 $(TiaPortalDir) 中未找到 $(TiaVersionNormalized) Openness PublicAPI（Siemens.Engineering.dll）。请确认已安装 TIA Portal Openness，或运行 scripts\构建V4.4.4.ps1 / 设置 TIA_PORTAL_DIR 后重新构建。" />
+  </Target>
+
+  <ItemGroup>
+    <Compile Remove="smoke\**\*.cs" />
+    <Compile Remove="backup_20260627\**\*.cs" />
+    <Compile Remove="backup_20260627_v2\**\*.cs" />
+    <Compile Remove="backup_20260627_v3\**\*.cs" />
+    <Compile Remove="backup_20260628_v1\**\*.cs" />
+    <!-- 阶段1裁剪：Archive 内为从未使用的领域源码，不参与编译（保留可随时捞回） -->
+    <Compile Remove="Archive\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <Reference Include="Siemens.Engineering" Condition="Exists('$(SiemensPublicApiDir)\Siemens.Engineering.dll')">
+      <HintPath>$(SiemensPublicApiDir)\Siemens.Engineering.dll</HintPath><Private>false</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.Hmi" Condition="Exists('$(SiemensPublicApiDir)\Siemens.Engineering.Hmi.dll')">
+      <HintPath>$(SiemensPublicApiDir)\Siemens.Engineering.Hmi.dll</HintPath><Private>false</Private>
+    </Reference>
+    <Reference Include="Siemens.Engineering.Contract" Condition="'$(SiemensContractPath)' != ''">
+      <HintPath>$(SiemensContractPath)</HintPath><Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="tools_filter.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- server_policy.json 不再随构建拷贝：避免每次构建把 bin 里的 Auto 覆盖回 Safe（阶段2修复）。
+         首次运行时若 bin 缺失该文件，请手动从 src 复制并按需修改 defaultExecutionMode。 -->
+    <None Include="App.config" />
+    <None Include="skills\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="templates\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="standards\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

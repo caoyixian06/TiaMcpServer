@@ -1,0 +1,84 @@
+﻿{
+  "policyVersion": "1.0",
+  "validatedEnvironment": "TIA Portal V19 Update 4 / WinCC Advanced",
+  "connectionPolicy": {
+    "sameProjectClassicHmi": "integratedBySharedSubnet",
+    "createSeparateConnectionXml": false,
+    "defaultConnectionNameOwnedByTia": true
+  },
+  "canvasProfiles": {
+    "800x420": {
+      "safeMargins": {
+        "left": 10,
+        "top": 5,
+        "right": 10,
+        "bottom": 10
+      },
+      "grid": 10,
+      "title": {
+        "left": 10,
+        "top": 5,
+        "width": 780,
+        "height": 28,
+        "fontMin": 18,
+        "fontMax": 22
+      },
+      "fontRanges": {
+        "section": [
+          10,
+          12
+        ],
+        "button": [
+          12,
+          16
+        ],
+        "label": [
+          10,
+          12
+        ],
+        "numericField": [
+          14,
+          24
+        ],
+        "footer": [
+          9,
+          10
+        ]
+      },
+      "indicatorDiameters": [
+        20,
+        26
+      ],
+      "preferredTouchMinimum": {
+        "width": 44,
+        "height": 36
+      },
+      "minimumControlGap": 4,
+      "preferredGroupGap": [
+        8,
+        16
+      ]
+    }
+  },
+  "textFit": {
+    "cjkWeight": 1.0,
+    "upperOrDigitWeight": 0.68,
+    "latinWeight": 0.56,
+    "spaceWeight": 0.35,
+    "widthFactorRange": [
+      1.25,
+      1.35
+    ],
+    "heightFactorRange": [
+      1.5,
+      1.65
+    ]
+  },
+  "failOn": [
+    "outOfBounds",
+    "textClipped",
+    "missingTag",
+    "guessedConnection",
+    "significantActionControlOverlap"
+  ]
+}
