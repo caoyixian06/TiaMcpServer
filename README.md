@@ -1,5 +1,7 @@
 # TIA-MCP Copilot V4.3.0 — 西门子博途 V17 MCP 服务器（TIA Portal V17 MCP Server）
 
+[English](README.en.md) | **简体中文**
+
 基于 C# / .NET Framework 4.8 / 西门子博途 V17（TIA Portal V17 Openness）的 MCP stdio 服务器，带中文 WinForms 控制中心。
 
 > **作者：曹义贤** · 邮箱 [3165352549@qq.com](mailto:3165352549@qq.com) · GitHub [@caoyixian06](https://github.com/caoyixian06)
@@ -37,7 +39,7 @@ V4.3.0 工程工作流与执行策略说明：
 在带 Python 3 的环境中可运行：
 
 ```text
-python scripts/static_audit_v420.py
+python scripts/static_audit_v442.py
 ```
 
 该脚本检查 JSON/XML、C# 分隔符、版本一致性、全部静态注册 Tool 的风险覆盖、工程工作流锚点、9 个按需规范包、统一安全链及 WinForms DPI 设置。它不能替代 C# 编译、TIA Openness 实机连接和 PLC 下载测试。
